@@ -1,7 +1,4 @@
-
-compilar
-g++ *.cpp -lpthread -o socket
-
-
-correr la aplicacion
-./socket
+Compilar
+g++ *.cpp -lpthread -o Programa
+Correr la aplicacion
+./programa

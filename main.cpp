@@ -1,42 +1,56 @@
+/////////////////////////////////////
+// Clase: proyectoSocket.cpp
+// Funcion: main
+/////////////////////////////////////
+
 #include <iostream>
-#include "Servidor.h"
-#include "Cliente.h"
+#include "archivos.h"
+// #include "servidor.h"
+// #include "cliente.h"
 
 using namespace std;
 
-int main (int argc,char *argv[]){
+int main(int argc, char *argv[]) {
 
-	int tipo=0;
-	int puerto=0;
-	cout<<"selecciones el tipo : 1: Servidor, 2: Cliente: cual?:   ";
-	cin >> tipo;
-	cin.get();
+string ruta = "prueba.txt";
+Archivos *archivos = new Archivos(ruta);
 
-	cout <<"puerto: ";
-	cin >> puerto;
-	cin.get();
 
-	int val =tipo;
 
-	if(val==1){
+	// int tipo =0;
+	// int puerto=0;
+	//
+	// cout<<"Seleccione el tipo: 1=Servidor ; 2=Cliente . Cual?:   ";
+	// cin>>tipo;
+	// cin.get();
+	//
+	// cout <<"Puerto: ";
+	// cin >> puerto;
+	// cin.get();
+	//
+	// int val=tipo;
+	//
+	// 	if(val==1){
+	//
+	// 		Servidor servidor;
+	//
+	// 		servidor.setPuerto(puerto);
+	// 		servidor.inicializarServidor();
+	// 		servidor.ejecutarServidor();
+	//
+	// 		while(1);
+	// 	}
+	//
+	// 	if(val==2){
+	//
+	// 		cout<< "Nombre del host o IP: ";
+	// 			string host;
+	// 			getline(cin,host);
+	//
+	//
+	// 		Cliente * cliente = new Cliente(puerto,host);
+	// 			cliente->conectarServidor();
+	// 	}
+	// 	return 0;
 
-		Servidor servidor;
-
-		servidor.setPuerto(puerto);
-		servidor.inicializarServidor();
-		servidor.ejecutarServidor();
-
-		while(1);
-	}
-	if (val==2){
-		cout<< "nombre del host o ip";
-		           string host;
-		           getline(cin,host);
-
-		   Cliente *cliente= new Cliente(puerto,host);
-
-		   cliente->conectarServidor();        
-	}
-
-	return 0;
-}
+}// fin de la clase
