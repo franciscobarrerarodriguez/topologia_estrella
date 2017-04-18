@@ -18,6 +18,8 @@
 #include <sstream>
 #include <vector>
 
+#include <fstream>//Para leer archivos
+
 #include "archivos.h"
 
 using namespace std;
