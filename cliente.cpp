@@ -52,10 +52,14 @@ void * Cliente::escribirServidor(void * cli){
 		if (infile.fail()) {
 			cout << "No se pudo abrir el archivo, intentando de nuevo." << endl;
 		} else {
+			stringstream stringStream;
 			while (!infile.eof()) { //Envia el contenido linea por linea.
 				string linea = "";
 				std::getline(infile, linea);
-				const char *msg = linea.c_str();
+				stringStream.str("");
+				stringStream << linea;
+				string auxiliar = stringStream.str();
+				const char *msg = auxiliar.c_str();
 				int i=send(cliente->getDescriptor(), msg, strlen(msg), 0);
 				sleep(1);
 				if(i==-1){
