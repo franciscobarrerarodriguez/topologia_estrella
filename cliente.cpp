@@ -56,10 +56,7 @@ void * Cliente::escribirServidor(void * cli){
 			while (!infile.eof()) { //Envia el contenido linea por linea.
 				string linea = "";
 				std::getline(infile, linea);
-				stringStream.str("");
-				stringStream << linea;
-				string auxiliar = stringStream.str();
-				const char *msg = auxiliar.c_str();
+				const char *msg = linea.c_str();
 				int i=send(cliente->getDescriptor(), msg, strlen(msg), 0);
 				sleep(1);
 				if(i==-1){
